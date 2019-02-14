@@ -14,7 +14,7 @@
 # limitations under the License.
 
 IFS=$'\n\t'
-set -eu
+set -eou pipefail
 
 if [[ "$#" -ne 2 || "${1}" == '-h' || "${1}" == '--help' ]]; then
   cat >&2 <<"EOF"
