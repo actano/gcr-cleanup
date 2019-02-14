@@ -38,7 +38,6 @@ main(){
     if [[ $C -ge $KEEP ]]; then
       (
         set -x
-        echo "deleting image ${REPOSITORY}@${digest}"
         gcloud container images delete -q --force-delete-tags "${REPOSITORY}@${digest}"
       )
     fi
