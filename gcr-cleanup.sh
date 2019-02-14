@@ -39,7 +39,6 @@ main(){
       (
         set -x
         echo "deleting image ${REPOSITORY}@${digest}"
-        gcloud container images delete -q --force-delete-tags "${REPOSITORY}@${digest}"
       )
     fi
     let C=C+1
