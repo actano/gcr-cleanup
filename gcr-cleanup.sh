@@ -43,9 +43,8 @@ main(){
     fi
     let C=C+1
   done
-  local D
-  let D=C-KEEP
-  echo "Deleted ${D} images in ${REPOSITORY}." >&2
+  echo "Found ${C} images"
+  echo "Deleted $(( C > KEEP ? C-KEEP : 0)) images in ${REPOSITORY}."
 }
 
 main "${1}" ${2}
